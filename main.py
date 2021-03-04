@@ -197,16 +197,10 @@ if __name__ == '__main__':
           
     # bot.py
     import os
-    from dotenv import load_dotenv
     
-    # 1
     from discord.ext import commands
     import discord
     
-    load_dotenv()
-    TOKEN = os.getenv('DISCORD_TOKEN')
-    
-    # 2
     bot = commands.Bot(command_prefix='!hitmarkerbot ')
     
     
