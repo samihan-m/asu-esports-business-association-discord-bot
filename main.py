@@ -204,7 +204,7 @@ if __name__ == '__main__':
     #invite link with proper perms:
     #https://discord.com/api/oauth2/authorize?client_id=816860985859375144&permissions=93184&scope=bot
     
-    @bot.command(name='search', help='Search hitmarker.com for any new listings.')
+    @bot.command(name='update', help='Have the bot search hitmarker.com for any new listings, and post them to this channel.')
     async def updateListings(ctx):
         await ctx.send("Searching...\nPlease wait...")
         new_listings = saveNewListings(readListings(driver))
