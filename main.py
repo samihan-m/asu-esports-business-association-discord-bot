@@ -30,6 +30,7 @@ if __name__ == '__main__':
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
+    #this code and the code above needs to be toggled to make things work on Heroku vs localhost
     '''
     #initialize selenium webdriver
     #pointing to chromedriver file
