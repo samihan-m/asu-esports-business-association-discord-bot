@@ -254,6 +254,18 @@ if __name__ == '__main__':
     
     async def displayEmbed(ctx, embed):
         await ctx.send(embed = embed)
+    
+    @bot.command(name='clear', help='Clear the bot\'s memory so it will repost old listings it\'s already seen')
+    async def clearMemory(ctx):
+        '''
+        Opens the file that holds old listing hash values in write mode, clearing it.
+        '''
+        await ctx.send('Clearing memory...\nPlease wait...')
+        
+        #Open the file for writitng (overwriting) then close it
+        open(r'./listings.txt', 'w').close()
+            
+        await ctx.send('Memory cleared.')
         
     def getEmbedLink(text, link):
         '''
