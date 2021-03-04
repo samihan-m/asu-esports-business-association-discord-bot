@@ -9,9 +9,6 @@ from bs4 import BeautifulSoup
 #for rendering a page's javascript before parsing with beautifulsoup
 from selenium import webdriver
 
-#for reading raw html of a site
-import requests
-
 #for calculating hashes of job listing pages when checking if a posting is new
 import hashlib
 
