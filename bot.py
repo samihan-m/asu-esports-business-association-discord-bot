@@ -10,9 +10,6 @@ import os
 from discord.ext import commands
 import discord
 
-#for connecting to the right discord bot
-from creds import TEST_TOKEN
-
 initial_extensions = ['hitmarker',
                       'lol']
 
@@ -41,8 +38,11 @@ if(heroku_check()):
     #grab discord token from configvars
     DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
 else:
+    #for connecting to the right discord bot
+    #from creds import TEST_TOKEN
     #grab discord token from creds
-    DISCORD_TOKEN = TEST_TOKEN
+    #DISCORD_TOKEN = TEST_TOKEN
+    print('Not on Heroku')
 
 @bot.event
 async def on_ready():
